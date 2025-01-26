@@ -61,6 +61,79 @@ cd NomDuRepo
 jupyter notebook Tests_Statistique_Python.ipynb
 ```
 
+# Analyse du T de Tschuprow en Python
+
+Ce projet explore l'utilisation du **T de Tschuprow**, une mesure de l'association entre deux variables qualitatives dans un **tableau de contingence**. Il est particulièrement utile pour des **tableaux rectangulaires** où le nombre de lignes et de colonnes est différent.
+
+## 📌 Contenu du projet
+
+### 1. Objectifs
+- Comprendre le **T de Tschuprow** et son utilisation.
+- Appliquer le **test du Chi²** pour vérifier l'indépendance des variables.
+- Calculer le **T de Tschuprow** pour mesurer l'association entre les variables.
+
+### 2. Tests Statistiques Utilisés
+- **Test du Chi²** : Vérifie l'indépendance entre deux variables qualitatives.
+- **T de Tschuprow** : Mesure la force de l'association entre ces variables.
+
+## 🛠 Bibliothèques Python utilisées
+- `numpy` : Manipulation de tableaux numériques.
+- `pandas` : Gestion des données tabulaires.
+- `scipy.stats` : Calcul du **test du Chi²**.
+- `pingouin` : Calcul du **T de Tschuprow** et du **V de Cramer**.
+
+## 🚀 Installation et Exécution
+
+### 1. Prérequis
+Assurez-vous d'avoir Python installé ainsi que les bibliothèques nécessaires :
+```bash
+pip install numpy pandas scipy pingouin
+```
+
+### 2. Exécution du Code
+Copiez et exécutez le script suivant dans un environnement Python ou dans Google Colab.
+
+```python
+# Importation des bibliothèques
+import numpy as np
+import pandas as pd
+import scipy.stats as stats
+import pingouin as pg
+
+# 📌 Création d'un tableau de contingence
+contingency_table = np.array([[50, 30, 20],
+                               [30, 50, 20]])
+
+# 📌 Calcul du test du Chi²
+chi2, p, dof, expected = stats.chi2_contingency(contingency_table)
+
+# 📌 Calcul du T de Tschuprow
+tschuprow_t = pg.cramers_v(contingency_table, bias_correction=False)  
+
+# 📌 Résultats
+print(f"Test du Chi² : Chi² = {chi2:.3f}, p-valeur = {p:.3f}")
+print(f"T de Tschuprow : {tschuprow_t:.3f}")
+```
+
+## 🔍 Interprétation des résultats
+- **Test du Chi²** : Indique s'il existe une **relation statistiquement significative** entre les variables.
+- **T de Tschuprow** : Quantifie la **force de l'association** (0 = aucune association, 1 = association parfaite).
+
+## 📂 Google Colab
+Vous pouvez exécuter ce projet directement sur **Google Colab** en suivant ce lien :
+[🔗 Ouvrir le notebook Google Colab](https://colab.research.google.com/drive/1-YOUR-NOTEBOOK-ID-HERE)
+
+## 👤 Auteur
+Ce projet a été réalisé par **[Votre Nom]**.
+
+## 📜 Licence
+Ce projet est sous licence MIT. Vous êtes libre de l'utiliser, le modifier et le redistribuer.
+
+
+
+
+
+
 ## Auteurs
 Ce projet a été réalisé par **[Etienne Ntumba]**.
 
