@@ -123,8 +123,12 @@ print(f"T de Tschuprow : {tschuprow_t:.3f}")
 Vous pouvez exécuter ce projet directement sur **Google Colab** en suivant ce lien :
 [🔗 Ouvrir le notebook Google Colab](https://colab.research.google.com/drive/1-YOUR-NOTEBOOK-ID-HERE)
 
-## 👤 Auteur
-Ce projet a été réalisé par **[Votre Nom]**.
+
+## Author
+
+**Etienne Ntumba Kabongo**  
+📧 Email: [etienne.ntumba.kabongo@umontreal.ca](mailto:etienne.ntumba.kabongo@umontreal.ca)  
+🔗 GitHub: [EtienneNtumba](https://github.com/EtienneNtumba)
 
 ## 📜 Licence
 Ce projet est sous licence MIT. Vous êtes libre de l'utiliser, le modifier et le redistribuer.
